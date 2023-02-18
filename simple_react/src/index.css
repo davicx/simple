@@ -1,5 +1,29 @@
 body {
-  margin: 12px;
-
+  margin: 20px;
 }
 
+.new-post {
+  min-height: 120px;
+  overflow: auto;
+  margin-left: 200px;
+  margin-bottom: 20px;
+  width: 800px;
+  border: 1px solid black;
+}
+
+.posts {
+  border: 1px solid blue;
+  min-height: 120px;
+  overflow: auto;
+  margin-left: 200px;
+  width: 800px;
+}
+
+.post {
+  border: 1px solid blue;
+  margin-bottom: 8px;
+}
+
+.post-liked {
+  background-color: blue;
+}
