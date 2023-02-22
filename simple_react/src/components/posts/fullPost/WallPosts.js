@@ -41,10 +41,8 @@ function WallPosts() {
     );
 }
 
-
-
-
 export default WallPosts;
+
 /*
 { data && <Post post = { data } />}
 
