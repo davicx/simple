@@ -1,19 +1,22 @@
 const express = require('express')
 const app = express()
-app.use(express.json());
+const cookieParser = require('cookie-parser');
 var cors = require('cors')
-app.use(cors())
+const morgan = require('morgan')
 
-//const morgan = require('morgan')
+app.use(express.json());
+app.use(cors())
+app.use(cookieParser())
+
 //const mysql = require('mysql')
 //app.use(morgan('short'))
 
-///articles/:articleId/comments
-
 //Application 
 const posts = require('./posts.js'); 
+const login = require('./login.js'); 
 
 app.use(posts);
+app.use(login);
 
 //Router
 app.listen(3003, () => {
