@@ -3,8 +3,15 @@ const loginRouter = express.Router();
 
 
 loginRouter.get("/cookie/get", (req, res) => {
-    const accessToken = req.cookies.accessToken;
-    const userName = req.cookies.currentUser;
+    let accessToken = "empty";
+    let userName = "empty";
+    
+    if(req.cookies.accessToken) {
+        accessToken = req.cookies.accessToken;
+    }    
+    if(req.cookies.currentUser) {
+        userName = req.cookies.currentUser;
+    }
 
     var response = {
         accessToken: accessToken,
